@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Examples</title>
+</head>
+<body>
+    <h1>Atividade DSW</h1>
+
+    <h2>A - Filtragem por nome de autores:</h2>
+    {% for book in nome_de_autores %}
+        <p>Autor: {{book.author}} > Título: {{ book.title }}</p>
+    {% endfor %}
+
+    <h2>B - Filtragem por tags específicas:</h2>
+    {% for book in tag_de_livros %}
+        <p>{{ book.title }}</p>
+    {% endfor %}
+
+    <h2>C - Filtragem por Bio de perfil:</h2>
+    {% for author in bio_de_perfil %}
+        <p>{{ author.name }}</p>
+    {% endfor %}
+
+    <h2>D - Filtragem por livros com avaliações altas:</h2>
+    {% for review in avaliacoes_altas %}
+        <p>{{ review.book }}</p>
+    {% endfor %}
+
+    <h2>E - Filtragem de usuários com url específica:</h2>
+    {% for usuario in usuarios_por_website %}
+        <p>{{ usuario.user }}</p>
+    {% endfor %}
+
+    <h2>F - Filtragem de livros sem avaliações:</h2>
+    {% for review in livros_sem_avaliacoes %}
+        <p>{{ review.book }}</p>
+    {% endfor %}
+
+    <h2>G - Autores com maior número de livros:</h2>
+    {% for author in maior_numero_livros %}
+        <p>Autor: {{ author.name }} > Quantidade de Livros: {{ author.num_books }}</p>
+    {% endfor %}
+
+    <h2>H - Livros com resumos longos:</h2>
+    {% for book in resumos_longos %}
+        <p>{{ book.title }}</p>
+    {% endfor %}
+
+    <h2>I - Avaliações de um autor específico</h2>
+    {% for review in avaliacoes_de_autor %}
+        <p>{{review.book.title}}</p>
+    {% endfor %}
+
+    <h2>J - Livros com Múltiplas Tags:</h2>
+    {% for book in livros_multiplas_tags %}
+        <p>{{book.title}}</p>
+    {% endfor %}
+
+</body>
+</html>
