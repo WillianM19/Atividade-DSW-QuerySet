@@ -21,4 +21,5 @@ from core.views import query_examples
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('teste1/',query_examples),
+    path('',query_examples),
 ]
